@@ -19,7 +19,7 @@ const Nav = () => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-6 text-lg font-medium">
+        <ul className="hidden md:flex space-x-6 text-lg font-medium ">
           {NavData.map((item) => (
             <li key={item.id} className="relative group">
               <Link to={item.path} className="hover:text-blue-500">

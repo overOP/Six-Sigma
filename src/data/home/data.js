@@ -22,8 +22,8 @@ export const universitiesData = [
     country: "usa",
     description:
       "An Ivy League university located in Cambridge, Massachusetts, known for excellence in education and research.",
-    logo: "https://upload.wikimedia.org/wikipedia/en/2/29/Harvard_shield_wreath.svg",
-    cover: "https://images.unsplash.com/photo-1588072432836-e10032774350",
+    logo: "https://wallpapers.com/images/hd/harvard-university-campus-bgar89aedmyyeyoo.jpg",
+    cover: "https://studyatuniversity.com/wp-content/uploads/2023/10/Harvard-University-in-United-States.jpg",
     location: "Cambridge, Massachusetts",
     type: "Private University",
     ranking: "#1 Global Ranking",
@@ -34,8 +34,8 @@ export const universitiesData = [
     country: "usa",
     description:
       "A world-leading institution focused on science, engineering, and technology.",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_logo.svg",
-    cover: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1",
+    logo: "https://thumbs.dreamstime.com/b/view-historic-architecture-mit-cambridge-ma-usa-memorial-drive-road-mit-cambridge-270373629.jpg",
+    cover: "https://andreian.com/wp-content/uploads/2020/03/free-mit-classes.jpg",
     location: "Cambridge, Massachusetts",
     type: "Private University",
     ranking: "Top 5 Global",
@@ -46,8 +46,8 @@ export const universitiesData = [
     country: "usa",
     description:
       "A top public university known for innovation, research, and activism.",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/8/8d/UC_Berkeley_seal.svg",
-    cover: "https://images.unsplash.com/photo-1605475128023-6d4b5bfc1c1a",
+    logo: "https://tse4.mm.bing.net/th/id/OIP.6ZRhwL4GB85ZsNxzLARSxQHaE6?rs=1&pid=ImgDetMain&o=7&rm=3",
+    cover: "https://www.tclf.org/sites/default/files/thumbnails/image/CA_Berkeley_UniversityOfCaliforniaAtBerkeley_byCharlieNguyen-Flickr_2008_001_Sig.jpg",
     location: "Berkeley, California",
     type: "Public University",
     ranking: "Top 30 Global",
