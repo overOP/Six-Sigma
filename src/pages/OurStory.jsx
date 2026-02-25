@@ -64,7 +64,7 @@ const OurStory = () => {
   }, []);
 
   return (
-    <section className="relative py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 overflow-hidden">
+    <section className="relative py-24 bg-gradient-to-br from-gray-100 via-white to-blue-50 overflow-hidden">
       {/* Background Decorations */}
       <div className="absolute -top-10 -left-10 w-72 h-72 bg-blue-300 rounded-full blur-3xl opacity-20"></div>
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-indigo-400 rounded-full blur-3xl opacity-20"></div>
@@ -93,7 +93,7 @@ const OurStory = () => {
           {/* Arrow */}
           <div
             ref={arrowRef}
-            className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 top-0"
+            className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 top-0 cursor-pointer"
           >
             {scrollDir === "down" ? (
               <FaLongArrowAltDown className="text-blue-600 text-4xl p-1" />

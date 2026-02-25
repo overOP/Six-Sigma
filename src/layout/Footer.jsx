@@ -3,7 +3,7 @@ import { FaFacebookF, FaXTwitter, FaInstagram } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t mt-20">
+    <footer className="bg-gray-600">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
         {/* TOP GRID */}
@@ -19,7 +19,7 @@ const Footer = () => {
               </h1>
             </div>
 
-            <p className="mt-4 text-gray-600 max-w-sm leading-relaxed">
+            <p className="mt-4 max-w-sm leading-relaxed text-gray-300">
               Empowering students and professionals to achieve global education
               goals with expert guidance and trusted consultancy.
             </p>
@@ -27,14 +27,14 @@ const Footer = () => {
 
           {/* CONTACT */}
           <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">
+            <h3 className="text-lg text-gray-300 font-semibold  mb-4">
               Contact Us
             </h3>
 
-            <div className="space-y-3 text-gray-600">
+            <div className="space-y-3 text-gray-300">
               <div className="flex items-start space-x-3">
                 <Map className="w-5 h-5 mt-1 text-green-500" />
-                <span>New Baneshwor, Kathmandu, Nepal</span>
+                <span className="text-gray-300">New Baneshwor, Kathmandu, Nepal</span>
               </div>
 
               <div className="flex items-center space-x-3">
@@ -56,7 +56,7 @@ const Footer = () => {
 
           {/* SOCIAL */}
           <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">
+            <h3 className="text-lg font-semibold text-gray-300 mb-4">
               Follow Us
             </h3>
 
@@ -65,7 +65,7 @@ const Footer = () => {
                 href="https://www.facebook.com/sixsigma.edunepal"
                  target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-gray-100 hover:bg-blue-500 hover:text-white transition-all duration-300"
+                className="p-3 rounded-full bg-gray-200 hover:bg-blue-500 hover:text-white transition-all duration-300"
               >
                 <FaFacebookF className="w-5 h-5" />
               </a>
@@ -74,7 +74,7 @@ const Footer = () => {
                 href="https://twitter.com/sixsigma_edunepal"
                  target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-gray-100 hover:bg-black hover:text-white transition-all duration-300"
+                className="p-3 rounded-full bg-gray-200 hover:bg-black hover:text-white transition-all duration-300"
               >
                 <FaXTwitter className="w-5 h-5" />
               </a>
@@ -83,7 +83,7 @@ const Footer = () => {
                 href="https://www.instagram.com/sixsigma.edunepal/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-gray-100 text-gray-600 
+                className="p-3 rounded-full bg-gray-200 text-gray-600 
              hover:bg-gradient-to-tr hover:from-yellow-400 
              hover:via-pink-500 hover:to-purple-600 
              hover:text-white hover:scale-110 
@@ -99,7 +99,7 @@ const Footer = () => {
         <hr className="my-10 border-gray-200" />
 
         {/* BOTTOM */}
-        <p className="text-center text-gray-500 text-sm">
+        <p className="text-center text-gray-300 text-sm">
           © 2024 Six Sigma Education Consultancy. All rights reserved.
         </p>
       </div>

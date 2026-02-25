@@ -4,7 +4,7 @@ const TeamSection = () => {
       <div className="container mx-auto px-4">
         {/* Heading */}
         <h2 className="text-4xl lg:text-5xl font-extrabold text-center mb-24">
-          Our Expert <span className="text-red-500">Team</span>
+          Our <span className="text-blue-500">Expert</span> <span className="text-red-500">Team</span>
         </h2>
 
         {/* Layout */}

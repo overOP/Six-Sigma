@@ -84,8 +84,7 @@ const Home = () => {
       {/* ================= HERO ================= */}
       <section
         ref={heroRef}
-        className="relative h-210 md:h-262 lg:h-218 bg-gray-300 m-2 rounded-3xl overflow-hidden px-4 sm:px-6"
-      >
+        className="relative bg-gray-300  m-2 rounded-3xl overflow-hidden px-4 sm:px-6 lg:px-10min-h-[80vh] sm:min-h-[85vh] lg:min-h-screenflex items-center">
         <div className="container mx-auto pt-24 sm:pt-28 lg:pt-32 grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
           <div className="text-center lg:text-left">
             <p className="hero-text text-xl font-semibold text-gray-600 mb-4">
@@ -114,7 +113,7 @@ const Home = () => {
             <img
               src="/main2.png"
               alt="Advisor"
-              className="w-full max-w-md lg:max-w-lg object-contain"
+              className=" max-w-md lg:max-w-lg object-contain -mt-9"
             />
 
             <div ref={yearsRef} className="absolute bottom-40 right-0">
@@ -125,7 +124,7 @@ const Home = () => {
       </section>
 
       {/* ================= ABOUT ================= */}
-      <section ref={aboutRef} className="py-24 bg-gray-50">
+      <section ref={aboutRef} className="py-24 bg-gray-50 mb-12">
         {AboutData.map((about) => (
           <div key={about.id} className="about-item">
             <About {...about} />

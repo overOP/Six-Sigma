@@ -9,105 +9,117 @@ import {
   Settings,
   Users,
 } from "lucide-react";
+import { Link } from "react-router";
 
 const services = [
   {
     title: "Business Strategy",
     description:
-      "Data-driven strategies to improve performance, uncover growth opportunities, and achieve long-term success.",
-    icon: <ChartLine className="w-10 h-10 text-blue-600 mb-4" />,
+      "Data-driven strategies to improve performance and unlock long-term growth.",
+    icon: <ChartLine size={40} />,
   },
   {
     title: "Operational Excellence",
     description:
-      "Optimize internal processes, reduce operational costs, and improve productivity across teams.",
-    icon: <Briefcase className="w-10 h-10 text-blue-600 mb-4" />,
+      "Optimize processes, reduce costs, and boost efficiency across teams.",
+    icon: <Briefcase size={40} />,
   },
   {
     title: "Digital Transformation",
     description:
-      "Leverage modern technologies to streamline operations and enhance customer experiences.",
-    icon: <Globe className="w-10 h-10 text-blue-600 mb-4" />,
+      "Modern technology solutions to enhance customer experiences.",
+    icon: <Globe size={40} />,
   },
   {
     title: "Management Consulting",
     description:
-      "Expert guidance to improve leadership, organizational structure, and decision-making.",
-    icon: <UserCheck className="w-10 h-10 text-blue-600 mb-4" />,
+      "Leadership advisory and strategic decision-making support.",
+    icon: <UserCheck size={40} />,
   },
   {
     title: "Growth & Scaling",
     description:
-      "Strategies to scale your business sustainably and expand into new markets.",
-    icon: <TrendingUp className="w-10 h-10 text-blue-600 mb-4" />,
+      "Sustainable strategies for expansion and market leadership.",
+    icon: <TrendingUp size={40} />,
   },
   {
     title: "Risk & Compliance",
     description:
-      "Identify risks early and ensure compliance with industry regulations and standards.",
-    icon: <ShieldCheck className="w-10 h-10 text-blue-600 mb-4" />,
+      "Proactive risk identification and regulatory compliance.",
+    icon: <ShieldCheck size={40} />,
   },
   {
     title: "Process Automation",
     description:
-      "Automate repetitive tasks to improve efficiency and reduce operational overhead.",
-    icon: <Settings className="w-10 h-10 text-blue-600 mb-4" />,
+      "Automate workflows to improve productivity and accuracy.",
+    icon: <Settings size={40} />,
   },
   {
     title: "HR & Talent Advisory",
     description:
-      "Build strong teams through talent strategy, workforce planning, and HR optimization.",
-    icon: <Users className="w-10 h-10 text-blue-600 mb-4" />,
+      "Build strong teams with optimized workforce planning.",
+    icon: <Users size={40} />,
   },
 ];
 
 const Services = () => {
   return (
-    <section className="relative py-24 bg-gradient-to-br from-white via-blue-50 to-indigo-100 overflow-hidden">
+    <section className="relative py-28 bg-gradient-to-br from-gray-900 via-slate-900 to-black text-white overflow-hidden">
 
-      {/* Decorative Blurs */}
-      <div className="absolute -top-10 -left-10 w-72 h-72 bg-blue-300 rounded-full blur-3xl opacity-20"></div>
-      <div className="absolute bottom-0 right-0 w-72 h-72 bg-indigo-400 rounded-full blur-3xl opacity-20"></div>
+      {/* Glow Background */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl"></div>
 
       <div className="relative container mx-auto px-6">
 
         {/* Heading */}
-        <h1 className="text-4xl lg:text-6xl font-extrabold text-center text-gray-800 mb-4">
-          Our{" "}
-          <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-            Consulting Services
-          </span>
-        </h1>
-
-        <p className="text-center text-gray-600 max-w-2xl mx-auto mb-16 text-lg">
-          We provide expert consulting solutions to help businesses grow,
-          innovate, and stay competitive in a rapidly changing market.
-        </p>
+        <div className="text-center mb-20">
+          <h1 className="text-5xl lg:text-6xl font-bold tracking-tight">
+            Premium <span className="text-blue-500">Consulting</span> Services
+          </h1>
+          <p className="mt-6 text-gray-400 max-w-2xl mx-auto text-lg">
+            Transforming businesses with strategy, innovation, and execution excellence.
+          </p>
+        </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-white/70 backdrop-blur-lg p-8 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 flex flex-col items-center text-center"
+              className="group relative p-[1px] rounded-3xl bg-gradient-to-br from-blue-500/30 via-indigo-500/20 to-transparent hover:from-blue-500 hover:via-indigo-500 transition duration-500"
             >
-              <div className="transform group-hover:scale-110 transition duration-500">
-                {service.icon}
+              <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 h-full flex flex-col items-center text-center hover:bg-white/10 transition duration-500">
+
+                <div className="mb-6 text-blue-400 group-hover:text-white transition duration-300">
+                  {service.icon}
+                </div>
+
+                <h3 className="text-xl font-semibold mb-3">
+                  {service.title}
+                </h3>
+
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  {service.description}
+                </p>
+
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-800 mt-2">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
             </div>
           ))}
+
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-20">
-          <button className="inline-flex items-center justify-center px-12 py-4 font-semibold text-white rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
-            Talk to a Consultant
+        {/* CTA */}
+        <nav>
+        <div className="text-center mt-24">
+          <Link to='/Applyonlinenow'>
+          <button className="px-14 py-4 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 font-semibold text-white shadow-xl hover:scale-105 hover:shadow-blue-500/40 transition-all duration-300">
+            Apply Online Now
           </button>
+          </Link>
         </div>
+        </nav>
 
       </div>
     </section>

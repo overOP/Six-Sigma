@@ -29,10 +29,10 @@ const services = [
 
 const Services = forwardRef((props, ref) => {
   return (
-    <section ref={ref} className="services-section bg-white">
+    <section ref={ref} className="services-section bg-white ">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-16">
-          Our Services
+          Our <span className="text-blue-600">Services</span> 
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
