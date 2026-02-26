@@ -64,7 +64,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="relative py-28 bg-gradient-to-br from-gray-900 via-slate-900 to-black text-white overflow-hidden">
+    <section className="relative py-28 bg-linear-to-br from-gray-900 via-slate-900 to-black text-white overflow-hidden">
 
       {/* Glow Background */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl"></div>
@@ -88,7 +88,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative p-[1px] rounded-3xl bg-gradient-to-br from-blue-500/30 via-indigo-500/20 to-transparent hover:from-blue-500 hover:via-indigo-500 transition duration-500"
+              className="group relative p-px rounded-3xl bg-linear-to-br from-blue-500/30 via-indigo-500/20 to-transparent hover:from-blue-500 hover:via-indigo-500 transition duration-500"
             >
               <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 h-full flex flex-col items-center text-center hover:bg-white/10 transition duration-500">
 
@@ -114,7 +114,7 @@ const Services = () => {
         <nav>
         <div className="text-center mt-24">
           <Link to='/Applyonlinenow'>
-          <button className="px-14 py-4 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 font-semibold text-white shadow-xl hover:scale-105 hover:shadow-blue-500/40 transition-all duration-300">
+          <button className="px-14 py-4 rounded-full bg-linear-to-r from-blue-600 to-indigo-600 font-semibold text-white shadow-xl hover:scale-105 hover:shadow-blue-500/40 transition-all duration-300">
             Apply Online Now
           </button>
           </Link>

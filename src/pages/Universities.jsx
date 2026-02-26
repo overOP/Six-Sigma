@@ -31,7 +31,7 @@ const Universities = () => {
   }, []);
 
   return (
-    <section className="relative py-24 bg-gradient-to-br from-white via-blue-50 to-indigo-100 overflow-hidden">
+    <section className="relative py-24 bg-linear-to-br from-white via-blue-50 to-indigo-100 overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-14">

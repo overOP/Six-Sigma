@@ -27,7 +27,7 @@ const teamMembers = [
 
 const OurTeam = () => {
   return (
-    <section className="relative py-24 bg-gradient-to-br from-white via-blue-50 to-indigo-100 overflow-hidden">
+    <section className="relative py-24 bg-linear-to-br from-white via-blue-50 to-indigo-100 overflow-hidden">
 
       {/* Background Decorative Blur */}
       <div className="absolute -top-10 -left-10 w-72 h-72 bg-blue-300 rounded-full blur-3xl opacity-20"></div>
@@ -38,7 +38,7 @@ const OurTeam = () => {
         {/* Heading */}
         <h1 className="text-4xl lg:text-6xl font-extrabold text-center text-gray-800 mb-4">
           Meet{" "}
-          <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
             Our Experts
           </span>
         </h1>
@@ -58,7 +58,7 @@ const OurTeam = () => {
               
               {/* Image */}
               <div className="relative w-36 h-36 mx-auto mb-6">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 blur-md opacity-0 group-hover:opacity-40 transition duration-500"></div>
+                <div className="absolute inset-0 rounded-full bg-linear-to-r from-blue-600 to-indigo-600 blur-md opacity-0 group-hover:opacity-40 transition duration-500"></div>
                 <img
                   src={member.image}
                   alt={member.name}

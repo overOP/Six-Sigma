@@ -64,7 +64,7 @@ const OurStory = () => {
   }, []);
 
   return (
-    <section className="relative py-24 bg-gradient-to-br from-gray-100 via-white to-blue-50 overflow-hidden">
+    <section className="relative py-24 bg-linear-to-br from-gray-100 via-white to-blue-50 overflow-hidden">
       {/* Background Decorations */}
       <div className="absolute -top-10 -left-10 w-72 h-72 bg-blue-300 rounded-full blur-3xl opacity-20"></div>
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-indigo-400 rounded-full blur-3xl opacity-20"></div>
@@ -73,7 +73,7 @@ const OurStory = () => {
         {/* Heading */}
         <h1 className="text-4xl lg:text-6xl font-extrabold text-center text-gray-800 mb-8">
           Our{" "}
-          <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
             Story
           </span>
         </h1>
@@ -134,7 +134,7 @@ const OurStory = () => {
 
         {/* CTA */}
         <div className="text-center mt-20">
-          <button className="inline-flex items-center justify-center px-12 py-4 font-semibold text-white rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+          <button className="inline-flex items-center justify-center px-12 py-4 font-semibold text-white rounded-full bg-linear-to-r from-blue-600 to-indigo-600 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
             Connect With Us
           </button>
         </div>

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import { Link } from "react-router";
 import Years from "../components/home/Years";
 import { AboutData } from "../data/home/data";
 import About from "../components/home/About";
@@ -106,6 +106,11 @@ const Home = () => {
               <button className="bg-red-500 hover:bg-red-600 text-white px-7 py-3 rounded-full font-medium">
                 Book a Free Consultation
               </button>
+              <Link to='/Applyonlinenow'>
+          <button className="px-14 py-4 ml-6 rounded-full bg-linear-to-r from-blue-600 to-indigo-600 font-semibold text-white shadow-xl hover:scale-105 hover:shadow-blue-500/40 transition-all duration-300">
+            Apply Online Now
+          </button>
+          </Link>
             </div>
           </div>
 

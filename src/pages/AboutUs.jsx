@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <section className="relative py-24 bg-gradient-to-br from-blue-50 via-white to-indigo-100 overflow-hidden">
+    <section className="relative py-24 bg-linear-to-br from-blue-50 via-white to-indigo-100 overflow-hidden">
       
       {/* Background Decorative Blur */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-blue-300 rounded-full blur-3xl opacity-20"></div>
@@ -12,7 +12,7 @@ const AboutUs = () => {
 
         {/* Heading */}
         <h1 className="text-4xl lg:text-6xl font-extrabold text-center text-gray-800 mb-6 leading-tight">
-          About <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+          About <span className="bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
             Our Consulting Firm
           </span>
         </h1>
@@ -91,7 +91,7 @@ const AboutUs = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <button className="relative inline-flex items-center justify-center px-12 py-4 font-semibold text-white rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+          <button className="relative inline-flex items-center justify-center px-12 py-4 font-semibold text-white rounded-full bg-linear-to-r from-blue-600 to-indigo-600 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
             Speak With Our Experts
           </button>
         </div>

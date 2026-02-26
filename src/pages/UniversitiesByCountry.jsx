@@ -27,7 +27,7 @@ const UniversitiesByCountry = () => {
   }, [country]);
 
   return (
-    <section className="py-24 bg-gradient-to-b from-blue-50 to-white">
+    <section className="py-24 bg-linear-to-b from-blue-50 to-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-12 text-center">

@@ -84,7 +84,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-gray-200 text-gray-600 
-             hover:bg-gradient-to-tr hover:from-yellow-400 
+             hover:bg-lineart-to-tr hover:from-yellow-400 
              hover:via-pink-500 hover:to-purple-600 
              hover:text-white hover:scale-110 
              transition-all duration-300"

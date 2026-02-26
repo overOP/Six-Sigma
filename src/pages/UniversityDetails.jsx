@@ -78,7 +78,7 @@ const UniversityDetails = () => {
             alt={uni.name}
             className="h-full w-full object-cover transform transition-transform duration-500 hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+          <div className="absolute inset-0 bg-glinear-to-t from-black/50 to-transparent" />
         </div>
       )}
 

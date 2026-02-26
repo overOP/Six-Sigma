@@ -24,7 +24,7 @@ const branches = [
 
 const Branches = () => {
   return (
-    <section className="relative py-24 bg-gradient-to-br from-white via-blue-50 to-indigo-100 overflow-hidden">
+    <section className="relative py-24 bg-linear-to-br from-white via-blue-50 to-indigo-100 overflow-hidden">
 
       {/* Decorative Blurs */}
       <div className="absolute -top-10 -left-10 w-72 h-72 bg-blue-300 rounded-full blur-3xl opacity-20"></div>
@@ -35,7 +35,7 @@ const Branches = () => {
         {/* Heading */}
         <h1 className="text-4xl lg:text-6xl font-extrabold text-center text-gray-800 mb-4">
           Our{" "}
-          <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
             Global Offices
           </span>
         </h1>
