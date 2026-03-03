@@ -9,6 +9,7 @@ import Services from "../pages/Services";
 import Universities from "../pages/Universities";
 import UniversitiesByCountry from "../pages/UniversitiesByCountry";
 import UniversityDetails from "../pages/UniversityDetails";
+import Apply from "../pages/Apply";
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ export const router = createBrowserRouter([
       { path: "/our-team", element: <OurTeam /> },
       { path: "/branches", element: <Branches /> },
       { path: "/services", element: <Services /> },
+      { path: "/Applyonlinenow", element: <Apply /> },
 
       { path: "/universities", element: <Universities /> },
       { path: "/universities/:country", element: <UniversitiesByCountry /> },
