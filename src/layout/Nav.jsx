@@ -86,7 +86,7 @@ const Nav = () => {
         {/* Desktop Button */}
         <div className="hidden md:block">
           <Link to="/contact">
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-full shadow-md hover:bg-linear-to-r hover:from-green-500 hover:to-blue-600 hover:shadow-xl hover:scale-105 transition-all duration-300">
+            <button className="bg-blue-600 text-white px-6 py-2 rounded-full shadow-md hover:bg-linear-to-r hover:from-green-500 hover:to-blue-600 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
               Contact Us
             </button>
           </Link>
@@ -151,7 +151,7 @@ const Nav = () => {
           <Link to="/contact">
             <button
               onClick={() => setIsOpen(false)}
-              className="w-full bg-blue-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-linear-to-r hover:from-green-500 hover:to-blue-600 hover:shadow-xl hover:scale-105 transition-all duration-300"
+              className="w-full bg-blue-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-linear-to-r hover:from-green-500 hover:to-blue-600 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
             >
               Contact Us
             </button>

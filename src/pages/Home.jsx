@@ -102,12 +102,12 @@ const Home = () => {
               Professional guidance you can trust.
             </p>
 
-            <div className="hero-text mt-8">
-              <button className="bg-red-500 hover:bg-red-600 text-white px-7 py-3 rounded-full font-medium">
+            <div className="hero-text -ml-10 mt-8">
+          <button className="px-14 py-4 ml-6 rounded-full bg-linear-to-r from-red-600 to-red-600 font-semibold text-white shadow-xl hover:scale-105 hover:shadow-red-500/40 transition-all duration-300">
                 Book a Free Consultation
               </button>
               <Link to='/Applyonlinenow'>
-          <button className="px-14 py-4 ml-6 rounded-full bg-linear-to-r from-blue-600 to-indigo-600 font-semibold text-white shadow-xl hover:scale-105 hover:shadow-blue-500/40 transition-all duration-300">
+          <button className="px-14 py-4 ml-6 rounded-full bg-linear-to-r from-blue-600 to-indigo-600 font-semibold text-white shadow-xl hover:scale-105 hover:shadow-blue-500/40 transition-all duration-300 cursor-pointer">
             Apply Online Now
           </button>
           </Link>

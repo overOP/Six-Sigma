@@ -114,7 +114,7 @@ const Services = () => {
         <nav>
         <div className="text-center mt-24">
           <Link to='/Applyonlinenow'>
-          <button className="px-14 py-4 rounded-full bg-linear-to-r from-blue-600 to-indigo-600 font-semibold text-white shadow-xl hover:scale-105 hover:shadow-blue-500/40 transition-all duration-300">
+          <button className="px-14 py-4 rounded-full bg-linear-to-r from-blue-600 to-indigo-600 font-semibold text-white shadow-xl hover:scale-105 hover:shadow-blue-500/40 transition-all duration-300 cursor-pointer">
             Apply Online Now
           </button>
           </Link>
