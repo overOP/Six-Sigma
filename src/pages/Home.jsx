@@ -103,7 +103,7 @@ const Home = () => {
             </p>
 
             <div className="hero-text -ml-10 mt-8">
-          <button className="px-14 py-4 ml-6 rounded-full bg-linear-to-r from-red-600 to-red-600 font-semibold text-white shadow-xl hover:scale-105 hover:shadow-red-500/40 transition-all duration-300">
+          <button className="px-14 py-4 ml-6 rounded-full bg-linear-to-r from-red-600 to-red-600 font-semibold text-white shadow-xl hover:scale-105 hover:shadow-red-500/40 transition-all duration-300 cursor-pointer">
                 Book a Free Consultation
               </button>
               <Link to='/Applyonlinenow'>

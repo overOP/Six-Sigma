@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router";
+import { Link } from "react-router";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { NavData, AboutData } from "../data/nav/data";
 
@@ -7,37 +7,23 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobileAboutOpen, setIsMobileAboutOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
 
-  const isServicesPage = location.pathname === "/services";
-
-  // 🔹 Scroll detection
+  // Scroll detection
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 80);
     };
     window.addEventListener("scroll", handleScroll);
-
-    // Initialize immediately in case page loads scrolled
-    handleScroll();
-
+    handleScroll(); // initialize on load
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // 🔹 Determine navbar text color
-  const getTextColor = () => {
-    if (isServicesPage) {
-      return isScrolled ? "text-black" : "text-white";
-    }
-    return "text-gray-800";
-  };
-
-  const textColor = getTextColor();
+  const linkColor = isScrolled ? "text-gray-800" : "";
 
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        isScrolled ? "bg-white/90 shadow-lg py-3" : "bg-transparent py-6"
+        isScrolled ? "bg-white shadow-lg py-3" : "bg-transparent py-6"
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
@@ -46,10 +32,11 @@ const Nav = () => {
           <img
             src="/logo.png"
             alt="Logo"
-            className={`transition-all duration-500 ${isScrolled ? "w-10" : "w-12"}`}
+            className="w-12 transition-all duration-500"
           />
-          <h1 className={`font-bold transition-all duration-500 ${isScrolled ? "text-2xl" : "text-3xl"} ${textColor}`}>
-            <span className="text-green-500">Six</span><span className="text-blue-500">Sigma</span> 
+          <h1 className={`font-bold text-3xl transition-all duration-500 ${linkColor}`}>
+            <span className="text-green-500">Six</span>
+            <span className="text-blue-500">Sigma</span>
           </h1>
         </div>
 
@@ -59,14 +46,14 @@ const Nav = () => {
             <li key={item.id} className="relative group">
               <Link
                 to={item.path}
-                className={`relative transition duration-300 ${textColor} hover:text-blue-600
+                className={`relative transition duration-300 ${linkColor} hover:text-blue-600
                 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-blue-600 after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full`}
               >
                 {item.title}
               </Link>
 
               {item.title === "About Us" && (
-                <ul className={`absolute left-0 top-full mt-3 w-44 bg-white shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300`}>
+                <ul className="absolute left-0 top-full mt-3 w-44 bg-white shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                   {AboutData.map((about) => (
                     <li key={about.id}>
                       <Link
@@ -110,13 +97,17 @@ const Nav = () => {
                 >
                   About Us
                   <ChevronDown
-                    className={`w-5 h-5 transition-transform ${isMobileAboutOpen ? "rotate-180" : ""}`}
+                    className={`w-5 h-5 transition-transform ${
+                      isMobileAboutOpen ? "rotate-180" : ""
+                    }`}
                   />
                 </button>
 
                 <div
                   className={`pl-4 overflow-hidden transition-all duration-300 ${
-                    isMobileAboutOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+                    isMobileAboutOpen
+                      ? "max-h-40 opacity-100"
+                      : "max-h-0 opacity-0"
                   }`}
                 >
                   {AboutData.map((about) => (
@@ -124,9 +115,7 @@ const Nav = () => {
                       key={about.id}
                       to={about.path}
                       onClick={() => setIsOpen(false)}
-                      className={`block py-2 text-sm ${
-                        isServicesPage ? (isScrolled ? "text-black" : "text-white") : "text-gray-700"
-                      }`}
+                      className="block py-2 text-sm text-gray-700"
                     >
                       {about.title}
                     </Link>
@@ -138,15 +127,13 @@ const Nav = () => {
                 key={item.id}
                 to={item.path}
                 onClick={() => setIsOpen(false)}
-                className={`block py-3 font-medium ${
-                  isServicesPage ? (isScrolled ? "text-black" : "text-white") : "text-gray-800"
-                }`}
+                className="block py-3 font-medium text-gray-800"
               >
                 {item.title}
               </Link>
             )
           )}
-
+          
           {/* Mobile Button */}
           <Link to="/contact">
             <button
