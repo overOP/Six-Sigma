@@ -9,6 +9,7 @@ const universities = [
   { country: "Singapore", slug: "singapore", logo: "/Countries/Singapore.jpg" },
   { country: "Australia", slug: "australia", logo: "/Countries/Australia.webp" },
   { country: "India", slug: "india", logo: "/Countries/india.avif" },
+  { country: "Bangladesh", slug: "bangladesh", logo: "/Countries/bd.jpg" },
 ];
 
 const Universities = () => {

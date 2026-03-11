@@ -12,8 +12,8 @@ const Apply = () => {
     mobile: "",
     whatsapp: "",
     dob: "",
-    currentaddress: "",
-    permanentaddress: "",
+    currentAddress: "",
+    permanentAddress: "",
     gender: "",
     desiredCourse: "",
     desiredCollege: "",
@@ -100,8 +100,8 @@ const Apply = () => {
         mobile: "",
         whatsapp: "",
         dob: "",
-        currentaddress: "",
-        permanentaddress: "",
+        currentAddress: "",
+        permanentAddress: "",
         gender: "",
         desiredCourse: "",
         desiredCollege: "",
@@ -129,7 +129,7 @@ const Apply = () => {
 
   return (
     <div className="min-h-screen pt-28 -mt-8 px-4 bg-linear-to-br from-slate-100 via-indigo-50 to-blue-100">
-      <div className="max-w-6xl mx-auto rounded-3xl border border-white overflow-hidden">
+      <div className="max-w-6xl mx-auto rounded-3xl border border-gray-300 overflow-hidden">
         {/* Header */}
         <div className="bg-linear-to-r from-indigo-800 via-blue-800 to-indigo-900 text-white py-12 px-6 text-center">
           <h1 className="text-4xl font-extrabold">
@@ -160,8 +160,8 @@ const Apply = () => {
                 <Input label="Mobile Number" name="mobile" value={formData.mobile} onChange={handleChange} />
                 <Input label="WhatsApp Number" name="whatsapp" value={formData.whatsapp} onChange={handleChange} />
                 <Input label="Date of Birth" type="date" name="dob" value={formData.dob} onChange={handleChange} />
-                <Input label="Current Address" name="currentaddress" value={formData.currentaddress} onChange={handleChange} />
-                <Input label="Permanent Address" name="permanentaddress" value={formData.permanentaddress} onChange={handleChange} />
+                <Input label="Current Address" name="currentAddress" value={formData.currentAddress} onChange={handleChange} />
+                <Input label="Permanent Address" name="permanentAddress" value={formData.permanentAddress} onChange={handleChange} />
 
                 <div className="mt-1">
                   <label className="block mb-4 font-semibold text-gray-700">Gender</label>
@@ -209,7 +209,7 @@ const Apply = () => {
             </Section>
 
             <div className="flex justify-center pt-10">
-              <button type="submit" className="px-12 py-4 rounded-2xl font-semibold text-white bg-purple-700 hover:bg-indigo-800 transition">
+              <button type="submit" className="px-12 py-4 rounded-2xl font-semibold text-white bg-purple-700 hover:bg-indigo-800 transition cursor-pointer">
                 Submit Application
               </button>
             </div>

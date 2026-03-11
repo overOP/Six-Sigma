@@ -7,6 +7,7 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobileAboutOpen, setIsMobileAboutOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showAlert, setShowAlert] = useState(false); // state for custom alert
 
   // Scroll detection
   useEffect(() => {
@@ -29,15 +30,21 @@ const Nav = () => {
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <img
-            src="/logo.png"
-            alt="Logo"
-            className="w-12 transition-all duration-500"
-          />
-          <h1 className={`font-bold text-3xl transition-all duration-500 ${linkColor}`}>
-            <span className="text-green-500">Six</span>
-            <span className="text-blue-500">Sigma</span>
-          </h1>
+          <Link to="/">
+            <img
+              src="/logo.png"
+              alt="Logo"
+              className="w-12 transition-all duration-500"
+            />
+          </Link>
+          <Link to="/">
+            <h1
+              className={`font-bold text-3xl transition-all duration-500 ${linkColor}`}
+            >
+              <span className="text-green-500">Six</span>
+              <span className="text-blue-500">Sigma</span>
+            </h1>
+          </Link>
         </div>
 
         {/* Desktop Menu */}
@@ -47,7 +54,7 @@ const Nav = () => {
               <Link
                 to={item.path}
                 className={`relative transition duration-300 ${linkColor} hover:text-blue-600
-                after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-blue-600 after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full`}
+                  after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-blue-600 after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full`}
               >
                 {item.title}
               </Link>
@@ -70,13 +77,16 @@ const Nav = () => {
           ))}
         </ul>
 
-        {/* Desktop Button */}
+        {/* Desktop Contact Button */}
         <div className="hidden md:block">
-          <Link to="/contact">
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-full shadow-md hover:bg-linear-to-r hover:from-green-500 hover:to-blue-600 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
-              Contact Us
-            </button>
-          </Link>
+          <button
+            onClick={() => setShowAlert(true)}
+            className="bg-blue-600 text-white px-6 py-2 rounded-full shadow-md 
+              hover:from-green-500 hover:to-blue-600 hover:shadow-xl hover:scale-105 
+              transition-all duration-300 cursor-pointer"
+          >
+            Contact Us
+          </button>
         </div>
 
         {/* Mobile Toggle */}
@@ -92,7 +102,9 @@ const Nav = () => {
             item.title === "About Us" ? (
               <div key={item.id}>
                 <button
-                  onClick={() => setIsMobileAboutOpen(!isMobileAboutOpen)}
+                  onClick={() =>
+                    setIsMobileAboutOpen(!isMobileAboutOpen)
+                  }
                   className="flex items-center justify-between w-full py-3 font-medium"
                 >
                   About Us
@@ -133,16 +145,32 @@ const Nav = () => {
               </Link>
             )
           )}
-          
-          {/* Mobile Button */}
-          <Link to="/contact">
+
+          {/* Mobile Contact Button */}
+          <button
+            onClick={() => setShowAlert(true)}
+            className="w-full bg-blue-600 text-white px-6 py-3 rounded-full shadow-md hover:from-green-500 hover:to-blue-600 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+          >
+            Contact Us
+          </button>
+        </div>
+      )}
+
+      {/* Custom WhatsApp Alert (Desktop + Mobile) */}
+      {showAlert && (
+        <div className="fixed inset-0 flex items-center justify-center bg-white/20 backdrop-blur-sm z-50 px-4">
+          <div className="bg-white p-6 rounded-lg shadow-xl w-full max-w-xs text-center relative border border-gray-200">
+            <h2 className="text-lg font-bold mb-2">Open WhatsApp</h2>
+            <p className="mb-4">
+              Please open WhatsApp and type the number you want to send the message to.
+            </p>
             <button
-              onClick={() => setIsOpen(false)}
-              className="w-full bg-blue-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-linear-to-r hover:from-green-500 hover:to-blue-600 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+              onClick={() => setShowAlert(false)}
+              className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition"
             >
-              Contact Us
+              Close
             </button>
-          </Link>
+          </div>
         </div>
       )}
     </nav>
