@@ -26,7 +26,6 @@ const Branches = () => {
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        {/* Heading */}
         <h1 className="text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-4">
           Our <span className="text-blue-600">Global Offices</span>
         </h1>
@@ -35,7 +34,6 @@ const Branches = () => {
           local expertise backed by global experience.
         </p>
 
-        {/* Branch Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {branches.map((branch, index) => (
             <div
@@ -66,7 +64,6 @@ const Branches = () => {
           ))}
         </div>
 
-        {/* Map */}
         <div className="mt-16 rounded-2xl overflow-hidden shadow">
           <iframe
             title="Company Locations"
