@@ -7,6 +7,7 @@ import { AboutData } from "../data/home/data";
 import About from "../components/home/About";
 import TeamSection from "../components/home/TeamSection";
 import Services from "../components/home/Services";
+import ApplyPopup from "../components/home/ApplyPopup";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,7 +18,8 @@ const Home = () => {
   const teamRef = useRef(null);
 
   useEffect(() => {
-    /* ================= HERO TEXT ================= */
+
+    /* HERO TEXT */
     gsap.fromTo(
       heroRef.current.querySelectorAll(".hero-text"),
       { opacity: 0, y: 30, scale: 0.96 },
@@ -31,7 +33,7 @@ const Home = () => {
       }
     );
 
-    /* ================= YEARS FLOAT ================= */
+    /* YEARS FLOAT */
     gsap.to(yearsRef.current, {
       y: 12,
       duration: 1.8,
@@ -40,7 +42,7 @@ const Home = () => {
       ease: "power1.inOut",
     });
 
-    /* ================= ABOUT ================= */
+    /* ABOUT */
     gsap.fromTo(
       ".about-item",
       { opacity: 0, y: 30, scale: 0.96 },
@@ -58,7 +60,7 @@ const Home = () => {
       }
     );
 
-    /* ================= TEAM ================= */
+    /* TEAM */
     gsap.fromTo(
       ".team-card",
       { opacity: 0, y: 30, scale: 0.96 },
@@ -77,16 +79,23 @@ const Home = () => {
     );
 
     ScrollTrigger.refresh();
+
   }, []);
 
   return (
     <>
-      {/* ================= HERO ================= */}
+      {/* APPLY POPUP */}
+      <ApplyPopup />
+
+      {/* HERO SECTION */}
       <section
         ref={heroRef}
-        className="relative bg-gray-300  m-2 rounded-3xl overflow-hidden px-4 sm:px-6 lg:px-10min-h-[80vh] sm:min-h-[85vh] lg:min-h-screenflex items-center">
+        className="relative bg-gray-300 m-2 rounded-3xl overflow-hidden px-4 sm:px-6 lg:px-10 min-h-[80vh] sm:min-h-[85vh] lg:min-h-screen flex items-center"
+      >
         <div className="container mx-auto pt-24 sm:pt-28 lg:pt-32 grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+
           <div className="text-center lg:text-left">
+
             <p className="hero-text text-xl font-semibold text-gray-600 mb-4">
               Welcome to <span className="text-green-500">Six</span>{" "}
               <span className="text-blue-500">Sigma</span>
@@ -102,33 +111,38 @@ const Home = () => {
               Professional guidance you can trust.
             </p>
 
-            <div className="hero-text -ml-10 mt-8">
-          <button className="px-14 py-4 ml-6 rounded-full bg-linear-to-r from-red-600 to-red-600 font-semibold text-white shadow-xl hover:scale-105 hover:shadow-red-500/40 transition-all duration-300 cursor-pointer">
+            <div className="hero-text mt-8">
+
+              <button className="px-14 py-4 mr-6 rounded-full bg-red-600 font-semibold text-white shadow-xl hover:scale-105 transition-all duration-300">
                 Book a Free Consultation
               </button>
-              <Link to='/Applyonlinenow'>
-          <button className="px-14 py-4 ml-6 rounded-full bg-linear-to-r from-blue-600 to-indigo-600 font-semibold text-white shadow-xl hover:scale-105 hover:shadow-blue-500/40 transition-all duration-300 cursor-pointer">
-            Apply Online Now
-          </button>
-          </Link>
+
+              <Link to="/Applyonlinenow">
+                <button className="px-14 py-4 rounded-full bg-blue-600 font-semibold text-white shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                  Apply Online Now
+                </button>
+              </Link>
+
             </div>
           </div>
 
           <div className="relative flex justify-center lg:justify-end">
+
             <img
               src="/main2.png"
               alt="Advisor"
-              className=" max-w-md lg:max-w-lg object-contain -mt-9"
+              className="max-w-md lg:max-w-lg object-contain"
             />
 
             <div ref={yearsRef} className="absolute bottom-40 right-0">
               <Years />
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* ================= ABOUT ================= */}
+      {/* ABOUT */}
       <section ref={aboutRef} className="py-24 bg-gray-50 mb-12">
         {AboutData.map((about) => (
           <div key={about.id} className="about-item">
@@ -137,10 +151,10 @@ const Home = () => {
         ))}
       </section>
 
-      {/* ================= SERVICES ================= */}
+      {/* SERVICES */}
       <Services />
 
-      {/* ================= TEAM ================= */}
+      {/* TEAM */}
       <section ref={teamRef}>
         <TeamSection />
       </section>

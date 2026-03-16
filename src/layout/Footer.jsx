@@ -1,14 +1,13 @@
 import { Map, Phone, Mail } from "lucide-react";
 import { FaFacebookF, FaXTwitter, FaInstagram } from "react-icons/fa6";
+import { FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <footer className="bg-gray-600">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-
         {/* TOP GRID */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-
           {/* BRAND */}
           <div>
             <div className="flex items-center space-x-2">
@@ -34,7 +33,9 @@ const Footer = () => {
             <div className="space-y-3 text-gray-300">
               <div className="flex items-start space-x-3">
                 <Map className="w-5 h-5 mt-1 text-green-500" />
-                <span className="text-gray-300">New Baneshwor, Kathmandu, Nepal</span>
+                <span className="text-gray-300">
+                  New Baneshwor, Kathmandu, Nepal
+                </span>
               </div>
 
               <div className="flex items-center space-x-3">
@@ -56,14 +57,14 @@ const Footer = () => {
 
           {/* SOCIAL */}
           <div>
-            <h3 className="text-lg font-semibold text-gray-300 mb-4">
+            <h3 className="text-lg font-semibold text-gray-300 mb-4" >
               Follow Us
             </h3>
 
             <div className="flex space-x-4">
               <a
                 href="https://www.facebook.com/sixsigma.edunepal"
-                 target="_blank"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-gray-200 hover:bg-blue-500 hover:text-white transition-all duration-300"
               >
@@ -72,7 +73,7 @@ const Footer = () => {
 
               <a
                 href="https://twitter.com/sixsigma_edunepal"
-                 target="_blank"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-gray-200 hover:bg-black hover:text-white transition-all duration-300"
               >
@@ -90,6 +91,15 @@ const Footer = () => {
              transition-all duration-300"
               >
                 <FaInstagram className="w-5 h-5" />
+              </a>
+
+              <a
+                href="https://www.instagram.com/sixsigma.edunepal/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-gray-200 hover:bg-black hover:text-white transition-all duration-300"
+              >
+                <FaTiktok className="w-5 h-5" />
               </a>
             </div>
           </div>

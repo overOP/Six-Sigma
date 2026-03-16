@@ -37,10 +37,10 @@ const Universities = () => {
         {/* Heading */}
         <div className="text-center mb-14">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900">
-            Our <span className="text-blue-600">Partner Universities</span>
+            Our <span className="text-blue-500">Partner</span> <span className="text-green-500">Universities</span>
           </h1>
           <p className="mt-4 text-gray-500 max-w-xl mx-auto">
-            Collaborating with world-class universities across the globe
+            Collaborating with world-class universities across the Global to provide you with the best education and career opportunities.
           </p>
         </div>
 

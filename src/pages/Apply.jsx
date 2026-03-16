@@ -136,8 +136,8 @@ const Apply = () => {
             <span className="text-green-400">Six</span>
             <span className="text-blue-400">Sigma</span> Education Consultancy
           </h1>
-          <p className="mt-4 text-sm">Old Baneshwor, Kathmandu | +977 9812345678</p>
-          <p className="text-sm">info@sixsigmaedu.com.np</p>
+          <p className="mt-4 text-sm">New Baneshwor, Kathmandu | +977 9812345678</p>
+          <p className="text-sm hover:text-green-400 cursor-pointer">info@sixsigmaedu.com.np</p>
         </div>
 
         {/* Form */}

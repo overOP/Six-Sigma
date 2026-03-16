@@ -158,7 +158,7 @@ const Nav = () => {
 
       {/* Custom WhatsApp Alert (Desktop + Mobile) */}
       {showAlert && (
-        <div className="fixed inset-0 flex items-center justify-center bg-white/20 backdrop-blur-sm z-50 px-4">
+        <div className="fixed inset-0 flex items-center justify-center bg-white/10 backdrop-blur-sm z-50 px-4">
           <div className="bg-white p-6 rounded-lg shadow-xl w-full max-w-xs text-center relative border border-gray-200">
             <h2 className="text-lg font-bold mb-2">Open WhatsApp</h2>
             <p className="mb-4">
