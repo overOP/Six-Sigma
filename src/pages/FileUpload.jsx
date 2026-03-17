@@ -67,7 +67,7 @@ const FileUpload = ({ label, name, onChange, file, circle = false }) => {
           )
         ) : (
           <div className="flex flex-col items-center text-center">
-            <AiOutlineUpload className="w-14 h-14 text-blue-400 mb-3 animate-bounce" />
+            <AiOutlineUpload className="w-10 h-10 text-blue-400 mb-3" />
             {!circle && (
               <>
                 <label className="block mb-2 font-bold text-gray-700 text-lg">

@@ -19,7 +19,7 @@ const Nav = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const linkColor = isScrolled ? "text-gray-800" : "";
+  const linkColor = isScrolled ? "text-gray-800" : "text-black";
 
   return (
     <nav

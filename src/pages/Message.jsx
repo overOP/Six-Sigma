@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Message = () => {
   const [formData, setFormData] = useState({
@@ -18,8 +20,10 @@ const Message = () => {
   // handle submit
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    console.log("Submitted Data:", formData);
+    toast.success("Message submitted successfully!", {
+      position: "top-center",
+      autoClose: 2000,
+    });
 
     // clear form
     setFormData({
@@ -30,6 +34,9 @@ const Message = () => {
 
   return (
     <div>
+      {/* ✅ Toast Container (IMPORTANT) */}
+      <ToastContainer />
+
       <div className="bg-blue-800 text-white py-4 text-center rounded">
         <h2 className="text-lg font-bold">
           <span className="text-green-500">Six</span>
